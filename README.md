@@ -7,4 +7,4 @@ The code in this repository shows an implementation of the construction of this 
 GCLC, a mathematical tool for visualising geometry. You can find out more about it on 
 this link: https://poincare.matf.bg.ac.rs/~janicic/gclc/ . 
 
-![alt text](colored_fractal_2.png)
+![alt text](colored_fractral_2.png)
