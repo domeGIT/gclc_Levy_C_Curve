@@ -6,4 +6,4 @@ following iteration we replace given lines with the sides of the apropriate isos
 The code in this repository shows an implementation of the construction of this fractal using
 GCLC, a mathematical tool for visualising geometry. You can find out more about it on 
 this link: https://poincare.matf.bg.ac.rs/~janicic/gclc/ . 
-![Alt text](colored_fractal.jpg)
+![Alt text](colored_fractal_2.jpg)
