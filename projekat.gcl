@@ -1,0 +1,46 @@
+procedure Levi {x1 y1 x2 y2 step}
+{
+	expression e_dx {x2-x1}
+	expression e_dy {y2-y1}
+	number dx e_dx
+	number dy e_dy
+	
+	point A x1 y1
+	point B x2 y2
+	
+	if_then_else {step==0}
+	{
+
+		
+		expression c {1.4*sqrt((65-x1)*(65-x1)*7 + 7*(45-y1)*(45-y1))}
+	    	color 255 c 0
+		linethickness  0.7
+		drawsegment A B
+	}
+	{
+		 %prva polovina
+		expression e_x2 {(x1+x2)/2-dy/2}
+		expression e_y2 {(y1+y2)/2+dx/2}
+	    	expression e_step {step-1}
+		number next_x2 e_x2
+		number next_y2 e_y2
+		number next_step e_step
+		call Levi {x1 y1 next_x2 next_y2 next_step}
+		
+		%druga polovina
+		expression e_x1 {(x1+x2)/2-dy/2}
+		expression e_x2 {(y1+y2)/2+dx/2}
+	    	expression e_step {step-1}
+		number next_x1 e_x1
+		number next_y1 e_x2
+		number next_step e_step
+		call Levi {next_x1 next_y1 x2 y2 next_step}
+		
+				
+	}
+	
+}
+call Levi {35 35 96 35 12}
+
+
+
